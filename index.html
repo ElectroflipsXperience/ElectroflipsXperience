@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electroflips Xperience - Plataformas de Streaming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght(400;700;900)&family=Rajdhani:wght(300;400;500;600;700)&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-sidebar">
+                <img src="https://i.postimg.cc/RF6QMfFP/electroflix-logo.jpg" alt="Electroflix" class="logo-image">
+                <span class="logo-text">ELECTROFLIX</span>
+            </div>
+        </div>
+        
+        <div class="search-sidebar">
+            <div class="search-container">
+                <input type="text" placeholder="Buscar plataformas..." class="search-input-sidebar" id="searchInput">
+                <button class="search-btn-sidebar" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>INICIO</span>
+            </a>
+            <a href="categorias.html" class="nav-item">
+                <i class="fas fa-th-large"></i>
+                <span>CATEGORÍAS</span>
+            </a>
+            <a href="populares.html" class="nav-item">
+                <i class="fas fa-fire"></i>
+                <span>POPULARES</span>
+            </a>
+            <a href="contacto.html" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>CONTACTO</span>
+            </a>
+            <a href="soporte.html" class="nav-item">
+                <i class="fas fa-headset"></i>
+                <span>SOPORTE</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="social-sidebar">
+                <a href="#" class="social-btn" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-btn" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-btn" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="main-logo">
+                    <div class="logo-symbol">
+                        <div class="symbol-part"></div>
+                        <div class="symbol-part"></div>
+                        <div class="symbol-part"></div>
+                        <div class="symbol-part"></div>
+                    </div>
+                    <h1 class="main-title">ELECTROFLIX <span class="accent">STREAMING</span></h1>
+                </div>
+                
+                <div class="hero-subtitle">
+                    <h2>SERVICIO DE PLATAFORMAS STREAMING</h2>
+                </div>
+                
+                <button class="cta-button" onclick="scrollToCategories()">
+                    <span>EXPLORAR CATÁLOGO</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="category-section" id="categories">
+            <div class="category-grid">
+                <button class="category-card active" data-category="all">
+                    <div class="category-icon">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <span class="category-name">TODAS</span>
+                    <div class="category-count">25</div>
+                </button>
+
+                <button class="category-card" data-category="netflix">
+                    <div class="category-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <span class="category-name">NETFLIX</span>
+                    <div class="category-count">1</div>
+                </button>
+
+                <button class="category-card" data-category="disney">
+                    <div class="category-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <span class="category-name">DISNEY+</span>
+                    <div class="category-count">2</div>
+                </button>
+
+                <button class="category-card" data-category="streaming">
+                    <div class="category-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <span class="category-name">STREAMING</span>
+                    <div class="category-count">15</div>
+                </button>
+
+                <button class="category-card" data-category="music">
+                    <div class="category-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <span class="category-name">MÚSICA</span>
+                    <div class="category-count">2</div>
+                </button>
+
+                <button class="category-card" data-category="sports">
+                    <div class="category-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <span class="category-name">DEPORTES</span>
+                    <div class="category-count">3</div>
+                </button>
+
+                <button class="category-card" data-category="productivity">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <span class="category-name">PRODUCTIVIDAD</span>
+                    <div class="category-count">2</div>
+                </button>
+
+                <button class="category-card" data-category="gaming">
+                    <div class="category-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <span class="category-name">GAMING</span>
+                    <div class="category-count">1</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content-section">
+            <div class="content-grid" id="contentGrid">
+                <!-- NETFLIX -->
+                <div class="content-card" data-category="netflix" data-name="netflix perfil unico">
+                    <div class="card-thumbnail">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrb_aunkQqVc27rZhNSt2ffRnLuUrgNLpDeQ&s" alt="Netflix Perfil Único">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="delivery-badge">🥳 Entrega Inmediata</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🔥 NETFLIX PERFIL ÚNICO</h3>
+                        <p class="card-description">Acceso completo a Netflix con perfil personalizado</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> 4K Ultra HD</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Netflix Perfil Único', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- VIX -->
+                <div class="content-card" data-category="streaming" data-name="vix premium">
+                    <div class="card-thumbnail">
+                        <img src="https://i.ytimg.com/vi/oQkPEXmQNDU/maxresdefault.jpg" alt="VIX">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="delivery-badge">🥳 Entrega Inmediata</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">💫 VIX PREMIUM</h3>
+                        <p class="card-description">Contenido latino premium sin anuncios</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> Full HD</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('VIX Premium', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- DISNEY ESTÁNDAR -->
+                <div class="content-card" data-category="disney" data-name="disney estandar">
+                    <div class="card-thumbnail">
+                        <img src="https://files.lafm.com.co/assets/public/styles/1400_x_788/public/2024-07/disneyplus.jpg?VersionId=8mp9P8o4s7vz5oZU7ZMbY09fhwqMCBMK&itok=35YpL757" alt="Disney Estándar">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="delivery-badge">🥳 Entrega Inmediata</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">📺 DISNEY ESTÁNDAR</h3>
+                        <p class="card-description">Todo el contenido Disney, Marvel y Star Wars</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> Full HD</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Disney Estándar', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- DISNEY PREMIUM -->
+                <div class="content-card" data-category="disney" data-name="disney premium">
+                    <div class="card-thumbnail">
+                        <img src="https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2022/08/disney-anuncia-tarifa-premium-sube-precios-pone-fecha-estreno-tarifa-anuncios-2782765.jpg?tf=3840x" alt="Disney Premium">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="delivery-badge">🥳 Entrega Inmediata</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🥳 DISNEY PREMIUM</h3>
+                        <p class="card-description">Disney+ Premium con todas las funciones</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> 4K HDR</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Disney Premium', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- HBO MAX -->
+                <div class="content-card" data-category="streaming" data-name="hbo max">
+                    <div class="card-thumbnail">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlmZ-JQacpU5MvkHkVZQ9wnJ3l9RwI8946nyO28In58C0_K9m8yv2GAcUW1Raw7GmfxsI&usqp=CAU" alt="HBO Max">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="delivery-badge">🥳 Entrega Inmediata</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">📽️ HBO MAX</h3>
+                        <p class="card-description">Series exclusivas y películas de estreno</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> 4K HDR</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('HBO Max', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PARAMOUNT -->
+                <div class="content-card" data-category="streaming" data-name="paramount plus">
+                    <div class="card-thumbnail">
+                        <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/FWS265CNEJEQHF53MCJQ3QR2PA.jpg" alt="Paramount+">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="delivery-badge">🥳 Entrega Inmediata</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🎞️ PARAMOUNT+</h3>
+                        <p class="card-description">Contenido exclusivo de Paramount Pictures</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> 4K</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Paramount+', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CRUNCHYROLL -->
+                <div class="content-card" data-category="streaming" data-name="crunchyroll premium">
+                    <div class="card-thumbnail">
+                        <img src="https://assets.nintendo.com/image/upload/q_auto/f_auto/ncom/software/switch/70010000042000/e965921d2670a197008fe9403e50aaa0b150eabcaab4ce8b0c860d75ba4d1ee6" alt="Crunchyroll">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="delivery-badge">🥳 Entrega Inmediata</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">📹 CRUNCHYROLL</h3>
+                        <p class="card-description">El mejor anime sin anuncios</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> HD</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Crunchyroll', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PLEX -->
+                <div class="content-card" data-category="streaming" data-name="plex premium">
+                    <div class="card-thumbnail">
+                        <img src="https://media.elestimulo.com/uploads/2023/09/plex-1.png" alt="Plex">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="delivery-badge">🥳 Entrega Inmediata</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🚨 PLEX</h3>
+                        <p class="card-description">Organiza y reproduce tu contenido multimedia</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> 4K</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Plex', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- VIKY RAKUTEN -->
+                <div class="content-card" data-category="streaming" data-name="viky rakuten">
+                    <div class="card-thumbnail">
+                        <img src="https://m.media-amazon.com/images/I/81eaJV0lgsL.png" alt="Viky Rakuten">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="delivery-badge">🥳 Entrega Inmediata</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🤩 VIKY RAKUTEN</h3>
+                        <p class="card-description">Películas y series de Rakuten TV</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> 4K</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Viky Rakuten', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AMAZON PRIME -->
+                <div class="content-card" data-category="prime" data-name="amazon prime video">
+                    <div class="card-thumbnail">
+                        <img src="https://www.tabascohoy.com/wp-content/uploads/2024/03/amazon-prime-video-848x477-1.jpeg" alt="Amazon Prime">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="delivery-badge">🥳 Entrega Inmediata</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">📺 AMAZON PRIME</h3>
+                        <p class="card-description">Prime Video + beneficios Amazon</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> 4K</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Amazon Prime', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- APPLE TV -->
+                <div class="content-card" data-category="streaming" data-name="apple tv plus">
+                    <div class="card-thumbnail">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl_Fd6RkYLepqgmIKiwRg3svNo_HmK6WO69Q&s" alt="Apple TV+">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🍎 APPLE TV+</h3>
+                        <p class="card-description">Contenido original de Apple</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> 4K HDR</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Apple TV+', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- IPTV -->
+                <div class="content-card" data-category="streaming" data-name="iptv premium">
+                    <div class="card-thumbnail">
+                        <img src="https://static2.pisapapeles.net/uploads/2023/11/IPTV-770x513.png" alt="IPTV">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">📡 IPTV</h3>
+                        <p class="card-description">Televisión por internet con canales internacionales</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> Full HD</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('IPTV', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- YOUTUBE PREMIUM -->
+                <div class="content-card" data-category="streaming" data-name="youtube premium">
+                    <div class="card-thumbnail">
+                        <img src="https://imagenes.eltiempo.com/files/og_thumbnail/uploads/2023/05/11/645d0a0305568.png" alt="YouTube Premium">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">📺 YOUTUBE PREMIUM</h3>
+                        <p class="card-description">YouTube sin anuncios + YouTube Music</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-music"></i> Sin Anuncios</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('YouTube Premium', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SPOTIFY PREMIUM -->
+                <div class="content-card" data-category="music" data-name="spotify premium">
+                    <div class="card-thumbnail">
+                        <img src="https://brightsideofnews.com/wp-content/uploads/2025/06/Is-Spotify-Premium-Worth-It.jpg" alt="Spotify Premium">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🎵 SPOTIFY PREMIUM</h3>
+                        <p class="card-description">Música sin límites y sin anuncios</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-music"></i> Alta Calidad</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Spotify Premium', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- MUBI -->
+                <div class="content-card" data-category="streaming" data-name="mubi premium">
+                    <div class="card-thumbnail">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSv1BgU5I5UnuYUPQWsUAiTmu38P3JL1WUUu0ovvtP9u5N9XYTvaIOtO_4PqFc9jzShibs&usqp=CAU" alt="Mubi">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🎬 MUBI</h3>
+                        <p class="card-description">Cine de autor y películas independientes</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> HD</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Mubi', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- UNIVERSAL -->
+                <div class="content-card" data-category="streaming" data-name="universal plus">
+                    <div class="card-thumbnail">
+                        <img src="https://static.wikia.nocookie.net/disneyypixar/images/9/95/Universal_Studios.jpg/revision/latest/scale-to-width-down/1200?cb=20180920175301&path-prefix=es" alt="Universal+">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🎭 UNIVERSAL+</h3>
+                        <p class="card-description">Contenido de Universal Studios</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> 4K</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Universal+', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- FLUJO TV -->
+                <div class="content-card" data-category="streaming" data-name="flujo tv">
+                    <div class="card-thumbnail">
+                        <img src="https://cdn.eldestapeweb.com/eldestape/022025/1739199844205.jpg?cw=1200&ch=676" alt="Flujo TV">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">📺 FLUJO TV</h3>
+                        <p class="card-description">Televisión en streaming para Latinoamérica</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> HD</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Flujo TV', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- DIRECTV -->
+                <div class="content-card" data-category="streaming" data-name="directv go">
+                    <div class="card-thumbnail">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjujbwXEWjsK73tJMPdJKFeS29lot0fnel4eBf06cBx7rSwzZ1F74hiVEvDdKdYMpPiUL0G8rzBe_LAiP6Cs0S3mZfLviTSWygNBgSt7Kaf8SMwakJvQSOU2iwp3l7GWE0WGflHhMwOr7cw/s800/DIRECTV-LOGO.png" alt="DirecTV GO">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">📡 DIRECTV GO</h3>
+                        <p class="card-description">Televisión satelital en streaming</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> Full HD</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('DirecTV GO', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- MLB PASS -->
+                <div class="content-card" data-category="sports" data-name="mlb pass">
+                    <div class="card-thumbnail">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_896088-MLV75326445114_032024-O.webp" alt="MLB Pass">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">⚾ MLB PASS</h3>
+                        <p class="card-description">Béisbol de las Grandes Ligas</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> HD</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('MLB Pass', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- NBA -->
+                <div class="content-card" data-category="sports" data-name="nba league pass">
+                    <div class="card-thumbnail">
+                        <img src="https://graffica.info/wp-content/uploads/2017/08/NBA-logo-png-download-free.png" alt="NBA League Pass">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🏀 NBA LEAGUE PASS</h3>
+                        <p class="card-description">Baloncesto de la NBA en vivo</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> 4K</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('NBA League Pass', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- METEGOL -->
+                <div class="content-card" data-category="sports" data-name="metegol">
+                    <div class="card-thumbnail">
+                        <img src="https://cdn-icons-png.flaticon.com/512/53/53283.png" alt="Metegol">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">⚽ METEGOL</h3>
+                        <p class="card-description">Fútbol y deportes en vivo</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> HD</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Metegol', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TIDAL -->
+                <div class="content-card" data-category="music" data-name="tidal premium">
+                    <div class="card-thumbnail">
+                        <img src="https://play-lh.googleusercontent.com/c1ZYe7CiZtbx8lXsF3wBDNxA5Q_9kt3mjQ4I84IawL2bWJb4M81ZCu-a_vUrqbkhnwFR=w3840-h2160-rw" alt="Tidal">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🎵 TIDAL</h3>
+                        <p class="card-description">Música en alta fidelidad</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-music"></i> HiFi</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Tidal', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- JELLYFIN -->
+                <div class="content-card" data-category="streaming" data-name="jellyfin">
+                    <div class="card-thumbnail">
+                        <img src="https://m.media-amazon.com/images/I/51i0m01RSxL.png" alt="Jellyfin">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">📱 JELLYFIN</h3>
+                        <p class="card-description">Servidor multimedia personal</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> 4K</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Jellyfin', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CANVA -->
+                <div class="content-card" data-category="productivity" data-name="canva pro">
+                    <div class="card-thumbnail">
+                        <img src="https://content-management-files.canva.com/c37135f6-6d9a-4920-b659-4f5e12698b8d/og-image-global-1200x630.jpg" alt="Canva Pro">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🎨 CANVA PRO</h3>
+                        <p class="card-description">Diseño gráfico profesional</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-palette"></i> Pro</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Canva Pro', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- DUOLINGO -->
+                <div class="content-card" data-category="education" data-name="duolingo plus">
+                    <div class="card-thumbnail">
+                        <img src="https://resizer.iproimg.com/unsafe/1280x/filters:format(webp):quality(85):max_bytes(102400)/https://assets.iprofesional.com/assets/jpg/2024/05/575224.jpg" alt="Duolingo Plus">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🦉 DUOLINGO PLUS</h3>
+                        <p class="card-description">Aprende idiomas sin anuncios</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-graduation-cap"></i> Premium</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Duolingo Plus', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PICSART -->
+                <div class="content-card" data-category="productivity" data-name="picsart premium">
+                    <div class="card-thumbnail">
+                        <img src="https://miro.medium.com/v2/resize:fit:2000/1*-X-jrUTZ_nQRMTVHXCSQMg.jpeg" alt="PicsArt Premium">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">📸 PICSART PREMIUM</h3>
+                        <p class="card-description">Editor de fotos profesional</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-camera"></i> Pro</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('PicsArt Premium', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- GAIA -->
+                <div class="content-card" data-category="streaming" data-name="gaia premium">
+                    <div class="card-thumbnail">
+                        <img src="https://mediatalks.uol.com.br/wp-content/uploads/2021/02/Captura-de-Tela-2021-03-29-as-19.36.15.png" alt="Gaia">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🌍 GAIA</h3>
+                        <p class="card-description">Contenido espiritual y de consciencia</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-hd-video"></i> HD</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Gaia', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+
+                <!-- GAME PASS -->
+                <div class="content-card" data-category="gaming" data-name="xbox game pass">
+                    <div class="card-thumbnail">
+                        <img src="https://alfabetajuega.com/hero/2025/04/captura.1744785236.1687.png?width=1200&aspect_ratio=16:9" alt="Xbox Game Pass">
+                        <div class="play-overlay">
+                            <div class="buy-button">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="price-badge">Consultar</div>
+                        <div class="special-badge">🤩 30 Días</div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">🎮 XBOX GAME PASS</h3>
+                        <p class="card-description">Biblioteca de juegos ilimitada</p>
+                        <div class="card-stats">
+                            <span class="duration"><i class="fas fa-calendar"></i> 30 Días</span>
+                            <span class="quality"><i class="fas fa-gamepad"></i> Ultimate</span>
+                        </div>
+                        <button class="buy-now-btn" onclick="buyProduct('Xbox Game Pass', 'Consultar')">
+                            <i class="fas fa-cart-plus"></i> COMPRAR AHORA
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/573243052782" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Cart Notification -->
+    <div class="cart-notification" id="cartNotification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="notificationText">Producto agregado al carrito</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

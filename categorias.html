@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías - Electroflips Xperience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-sidebar">
+                <img src="https://i.postimg.cc/RF6QMfFP/electroflix-logo.jpg" alt="Electroflix" class="logo-image">
+                <span class="logo-text">ELECTROFLIX</span>
+            </div>
+        </div>
+        
+        <div class="search-sidebar">
+            <div class="search-container">
+                <input type="text" placeholder="Buscar plataformas..." class="search-input-sidebar" id="searchInput">
+                <button class="search-btn-sidebar" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>INICIO</span>
+            </a>
+            <a href="categorias.html" class="nav-item active">
+                <i class="fas fa-th-large"></i>
+                <span>CATEGORÍAS</span>
+            </a>
+            <a href="populares.html" class="nav-item">
+                <i class="fas fa-fire"></i>
+                <span>POPULARES</span>
+            </a>
+            <a href="contacto.html" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>CONTACTO</span>
+            </a>
+            <a href="soporte.html" class="nav-item">
+                <i class="fas fa-headset"></i>
+                <span>SOPORTE</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="social-sidebar">
+                <a href="#" class="social-btn" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-btn" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-btn" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="section-header">
+            <h2 class="section-title">CATEGORÍAS DE STREAMING</h2>
+            <p class="section-subtitle">Explora nuestras plataformas organizadas por categorías</p>
+        </div>
+        
+        <div class="categories-content">
+            <div class="category-list">
+                <div class="category-item" onclick="goToCategory('netflix')">
+                    <div class="category-item-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="category-item-info">
+                        <h3>Netflix</h3>
+                        <p>Series y películas originales</p>
+                        <span class="item-count">1 plan disponible</span>
+                    </div>
+                </div>
+                
+                <div class="category-item" onclick="goToCategory('disney')">
+                    <div class="category-item-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="category-item-info">
+                        <h3>Disney+</h3>
+                        <p>Contenido familiar y Marvel</p>
+                        <span class="item-count">2 planes disponibles</span>
+                    </div>
+                </div>
+                
+                <div class="category-item" onclick="goToCategory('prime')">
+                    <div class="category-item-icon">
+                        <i class="fab fa-amazon"></i>
+                    </div>
+                    <div class="category-item-info">
+                        <h3>Prime Video</h3>
+                        <p>Incluye beneficios Amazon</p>
+                        <span class="item-count">1 plan disponible</span>
+                    </div>
+                </div>
+                
+                <div class="category-item" onclick="goToCategory('streaming')">
+                    <div class="category-item-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="category-item-info">
+                        <h3>Otras Plataformas</h3>
+                        <p>HBO Max, Crunchyroll, Apple TV+</p>
+                        <span class="item-count">15 planes disponibles</span>
+                    </div>
+                </div>
+                
+                <div class="category-item" onclick="goToCategory('music')">
+                    <div class="category-item-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="category-item-info">
+                        <h3>Música</h3>
+                        <p>Spotify Premium, Tidal</p>
+                        <span class="item-count">2 planes disponibles</span>
+                    </div>
+                </div>
+                
+                <div class="category-item" onclick="goToCategory('sports')">
+                    <div class="category-item-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <div class="category-item-info">
+                        <h3>Deportes</h3>
+                        <p>MLB, NBA, Metegol</p>
+                        <span class="item-count">3 planes disponibles</span>
+                    </div>
+                </div>
+                
+                <div class="category-item" onclick="goToCategory('productivity')">
+                    <div class="category-item-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="category-item-info">
+                        <h3>Productividad</h3>
+                        <p>Canva Pro, PicsArt</p>
+                        <span class="item-count">2 planes disponibles</span>
+                    </div>
+                </div>
+                
+                <div class="category-item" onclick="goToCategory('gaming')">
+                    <div class="category-item-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="category-item-info">
+                        <h3>Gaming</h3>
+                        <p>Xbox Game Pass</p>
+                        <span class="item-count">1 plan disponible</span>
+                    </div>
+                </div>
+
+                <div class="category-item" onclick="goToCategory('education')">
+                    <div class="category-item-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="category-item-info">
+                        <h3>Educación</h3>
+                        <p>Duolingo Plus</p>
+                        <span class="item-count">1 plan disponible</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Categories -->
+        <div class="featured-section">
+            <h3 class="featured-title">Categorías Destacadas</h3>
+            <div class="featured-grid">
+                <div class="featured-card" onclick="goToCategory('streaming')">
+                    <div class="featured-image">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <div class="featured-content">
+                        <h4>Streaming Premium</h4>
+                        <p>Las mejores plataformas de entretenimiento</p>
+                        <span class="featured-count">15 servicios</span>
+                    </div>
+                </div>
+
+                <div class="featured-card" onclick="goToCategory('music')">
+                    <div class="featured-image">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="featured-content">
+                        <h4>Música Sin Límites</h4>
+                        <p>Disfruta de millones de canciones</p>
+                        <span class="featured-count">2 servicios</span>
+                    </div>
+                </div>
+
+                <div class="featured-card" onclick="goToCategory('sports')">
+                    <div class="featured-image">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <div class="featured-content">
+                        <h4>Deportes en Vivo</h4>
+                        <p>No te pierdas ningún partido</p>
+                        <span class="featured-count">3 servicios</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/573243052782" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Cart Notification -->
+    <div class="cart-notification" id="cartNotification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="notificationText">Categoría seleccionada</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

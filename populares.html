@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Populares - Electroflips Xperience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-sidebar">
+                <img src="https://i.postimg.cc/RF6QMfFP/electroflix-logo.jpg" alt="Electroflix" class="logo-image">
+                <span class="logo-text">ELECTROFLIX</span>
+            </div>
+        </div>
+        
+        <div class="search-sidebar">
+            <div class="search-container">
+                <input type="text" placeholder="Buscar plataformas..." class="search-input-sidebar" id="searchInput">
+                <button class="search-btn-sidebar" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>INICIO</span>
+            </a>
+            <a href="categorias.html" class="nav-item">
+                <i class="fas fa-th-large"></i>
+                <span>CATEGORÍAS</span>
+            </a>
+            <a href="populares.html" class="nav-item active">
+                <i class="fas fa-fire"></i>
+                <span>POPULARES</span>
+            </a>
+            <a href="contacto.html" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>CONTACTO</span>
+            </a>
+            <a href="soporte.html" class="nav-item">
+                <i class="fas fa-headset"></i>
+                <span>SOPORTE</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="social-sidebar">
+                <a href="#" class="social-btn" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-btn" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-btn" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="section-header">
+            <h2 class="section-title">PLATAFORMAS POPULARES</h2>
+            <p class="section-subtitle">Las más vendidas y mejor valoradas por nuestros clientes</p>
+        </div>
+        
+        <div class="popular-content">
+            <div class="popular-grid">
+                <div class="popular-item">
+                    <div class="popular-rank">1</div>
+                    <div class="popular-info">
+                        <h3>🔥 Netflix Perfil Único</h3>
+                        <p>El más vendido - Acceso completo</p>
+                        <span class="popular-price">Consultar precio</span>
+                        <div class="popular-stats">
+                            <span><i class="fas fa-star"></i> 4.9/5</span>
+                            <span><i class="fas fa-users"></i> 1,250+ ventas</span>
+                        </div>
+                    </div>
+                    <button class="popular-btn" onclick="buyProduct('Netflix Perfil Único', 'Consultar')">COMPRAR</button>
+                </div>
+                
+                <div class="popular-item">
+                    <div class="popular-rank">2</div>
+                    <div class="popular-info">
+                        <h3>🥳 Disney+ Premium</h3>
+                        <p>Mejor para familias - 4K HDR</p>
+                        <span class="popular-price">Consultar precio</span>
+                        <div class="popular-stats">
+                            <span><i class="fas fa-star"></i> 4.8/5</span>
+                            <span><i class="fas fa-users"></i> 980+ ventas</span>
+                        </div>
+                    </div>
+                    <button class="popular-btn" onclick="buyProduct('Disney+ Premium', 'Consultar')">COMPRAR</button>
+                </div>
+                
+                <div class="popular-item">
+                    <div class="popular-rank">3</div>
+                    <div class="popular-info">
+                        <h3>📽️ HBO Max</h3>
+                        <p>Contenido premium - Series exclusivas</p>
+                        <span class="popular-price">Consultar precio</span>
+                        <div class="popular-stats">
+                            <span><i class="fas fa-star"></i> 4.7/5</span>
+                            <span><i class="fas fa-users"></i> 750+ ventas</span>
+                        </div>
+                    </div>
+                    <button class="popular-btn" onclick="buyProduct('HBO Max', 'Consultar')">COMPRAR</button>
+                </div>
+
+                <div class="popular-item">
+                    <div class="popular-rank">4</div>
+                    <div class="popular-info">
+                        <h3>🎵 Spotify Premium</h3>
+                        <p>Música sin límites - Alta calidad</p>
+                        <span class="popular-price">Consultar precio</span>
+                        <div class="popular-stats">
+                            <span><i class="fas fa-star"></i> 4.9/5</span>
+                            <span><i class="fas fa-users"></i> 650+ ventas</span>
+                        </div>
+                    </div>
+                    <button class="popular-btn" onclick="buyProduct('Spotify Premium', 'Consultar')">COMPRAR</button>
+                </div>
+
+                <div class="popular-item">
+                    <div class="popular-rank">5</div>
+                    <div class="popular-info">
+                        <h3>📺 YouTube Premium</h3>
+                        <p>Sin anuncios + YouTube Music</p>
+                        <span class="popular-price">Consultar precio</span>
+                        <div class="popular-stats">
+                            <span><i class="fas fa-star"></i> 4.6/5</span>
+                            <span><i class="fas fa-users"></i> 520+ ventas</span>
+                        </div>
+                    </div>
+                    <button class="popular-btn" onclick="buyProduct('YouTube Premium', 'Consultar')">COMPRAR</button>
+                </div>
+
+                <div class="popular-item">
+                    <div class="popular-rank">6</div>
+                    <div class="popular-info">
+                        <h3>🎨 Canva Pro</h3>
+                        <p>Diseño profesional - Más vendido</p>
+                        <span class="popular-price">Consultar precio</span>
+                        <div class="popular-stats">
+                            <span><i class="fas fa-star"></i> 4.8/5</span>
+                            <span><i class="fas fa-users"></i> 480+ ventas</span>
+                        </div>
+                    </div>
+                    <button class="popular-btn" onclick="buyProduct('Canva Pro', 'Consultar')">COMPRAR</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trending Section -->
+        <div class="trending-section">
+            <h3 class="trending-title">🔥 Tendencias del Mes</h3>
+            <div class="trending-grid">
+                <div class="trending-card">
+                    <div class="trending-badge">NUEVO</div>
+                    <h4>🍎 Apple TV+</h4>
+                    <p>Contenido original de Apple</p>
+                    <button class="trending-btn" onclick="buyProduct('Apple TV+', 'Consultar')">VER OFERTA</button>
+                </div>
+
+                <div class="trending-card">
+                    <div class="trending-badge">HOT</div>
+                    <h4>🎮 Xbox Game Pass</h4>
+                    <p>Biblioteca de juegos ilimitada</p>
+                    <button class="trending-btn" onclick="buyProduct('Xbox Game Pass', 'Consultar')">VER OFERTA</button>
+                </div>
+
+                <div class="trending-card">
+                    <div class="trending-badge">OFERTA</div>
+                    <h4>📹 Crunchyroll</h4>
+                    <p>El mejor anime sin anuncios</p>
+                    <button class="trending-btn" onclick="buyProduct('Crunchyroll', 'Consultar')">VER OFERTA</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <h3 class="stats-title">Nuestras Estadísticas</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">5,000+</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Plataformas Disponibles</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Soporte Técnico</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Tiempo de Actividad</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/573243052782" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Cart Notification -->
+    <div class="cart-notification" id="cartNotification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="notificationText">Producto agregado al carrito</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte - Electroflips Xperience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-sidebar">
+                <img src="https://i.postimg.cc/RF6QMfFP/electroflix-logo.jpg" alt="Electroflix" class="logo-image">
+                <span class="logo-text">ELECTROFLIX</span>
+            </div>
+        </div>
+        
+        <div class="search-sidebar">
+            <div class="search-container">
+                <input type="text" placeholder="Buscar plataformas..." class="search-input-sidebar" id="searchInput">
+                <button class="search-btn-sidebar" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>INICIO</span>
+            </a>
+            <a href="categorias.html" class="nav-item">
+                <i class="fas fa-th-large"></i>
+                <span>CATEGORÍAS</span>
+            </a>
+            <a href="populares.html" class="nav-item">
+                <i class="fas fa-fire"></i>
+                <span>POPULARES</span>
+            </a>
+            <a href="contacto.html" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>CONTACTO</span>
+            </a>
+            <a href="soporte.html" class="nav-item active">
+                <i class="fas fa-headset"></i>
+                <span>SOPORTE</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="social-sidebar">
+                <a href="#" class="social-btn" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-btn" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-btn" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="section-header">
+            <h2 class="section-title">SOPORTE TÉCNICO</h2>
+            <p class="section-subtitle">Te ayudamos con cualquier problema o duda</p>
+        </div>
+        
+        <div class="support-content">
+            <div class="support-grid">
+                <div class="support-item">
+                    <div class="support-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Preguntas Frecuentes</h3>
+                    <p>Encuentra respuestas a las dudas más comunes sobre nuestros servicios</p>
+                    <button class="support-btn" onclick="toggleFAQ()">VER FAQ</button>
+                </div>
+                
+                <div class="support-item">
+                    <div class="support-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Chat en Vivo</h3>
+                    <p>Habla directamente con nuestro equipo de soporte por WhatsApp</p>
+                    <button class="support-btn" onclick="openWhatsApp()">INICIAR CHAT</button>
+                </div>
+                
+                <div class="support-item">
+                    <div class="support-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Soporte Técnico</h3>
+                    <p>Ayuda especializada con problemas de configuración y acceso</p>
+                    <button class="support-btn" onclick="requestSupport()">SOLICITAR AYUDA</button>
+                </div>
+
+                <div class="support-item">
+                    <div class="support-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Garantía</h3>
+                    <p>Información sobre nuestra garantía y políticas de reemplazo</p>
+                    <button class="support-btn" onclick="showWarranty()">VER GARANTÍA</button>
+                </div>
+
+                <div class="support-item">
+                    <div class="support-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Guías de Uso</h3>
+                    <p>Tutoriales paso a paso para configurar tus plataformas</p>
+                    <button class="support-btn" onclick="showGuides()">VER GUÍAS</button>
+                </div>
+
+                <div class="support-item">
+                    <div class="support-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Reportar Problema</h3>
+                    <p>Informa sobre cualquier inconveniente con tu servicio</p>
+                    <button class="support-btn" onclick="reportIssue()">REPORTAR</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section" id="faqSection" style="display: none;">
+            <h3 class="faq-title">Preguntas Frecuentes</h3>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h4>¿Cómo recibo mis datos de acceso?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Una vez confirmado el pago, recibirás los datos de acceso por WhatsApp en un máximo de 5 minutos. Incluye usuario, contraseña e instrucciones de uso.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h4>¿Qué hago si mi cuenta deja de funcionar?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Contáctanos inmediatamente por WhatsApp. Tenemos garantía completa y reemplazaremos tu cuenta sin costo adicional en menos de 24 horas.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h4>¿Puedo cambiar mi contraseña?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>En cuentas compartidas no se puede cambiar la contraseña. En perfiles únicos sí es posible. Te indicaremos el tipo de cuenta al momento de la entrega.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h4>¿Cuántos dispositivos puedo usar?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Depende del plan. Netflix permite 1-4 pantallas, Disney+ hasta 4 dispositivos, Spotify 1 dispositivo. Te especificamos los límites de cada servicio.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h4>¿Ofrecen reembolsos?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No ofrecemos reembolsos, pero sí garantía completa. Si hay problemas con tu cuenta, la reemplazamos por una nueva sin costo adicional.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">
+                        <h4>¿Cómo renuevo mi suscripción?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Te contactaremos antes del vencimiento para ofrecerte la renovación. También puedes escribirnos por WhatsApp cuando necesites renovar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Support -->
+        <div class="contact-support">
+            <h3 class="contact-title">¿No encontraste lo que buscabas?</h3>
+            <p class="contact-subtitle">Nuestro equipo está disponible 24/7 para ayudarte</p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/573243052782" class="contact-btn whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+                <a href="mailto:info@electroflix.com" class="contact-btn email">
+                    <i class="fas fa-envelope"></i>
+                    Email
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/573243052782" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Cart Notification -->
+    <div class="cart-notification" id="cartNotification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="notificationText">Solicitud enviada</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
